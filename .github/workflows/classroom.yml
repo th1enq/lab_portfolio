@@ -1,0 +1,106 @@
+name: Autograding Tests
+
+on:
+  push:
+    paths-ignore:
+      - "README.md"
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: "Create a PR with result.png for debugging"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  actions: read
+  contents: write
+  pull-requests: write
+
+jobs:
+  autograding:
+    runs-on: arc-runner-set
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Load env
+        shell: bash
+        run: |
+          set -euo pipefail
+          GLOBAL_NODE_MODULES="$(npm root -g 2>/dev/null | tail -n 1 | tr -d '\r')"
+          echo "GLOBAL_NODE_MODULES=$GLOBAL_NODE_MODULES"
+          echo "NODE_PATH=$GLOBAL_NODE_MODULES" >> "$GITHUB_ENV"
+
+          # Propagate ARC runner container env var to subsequent workflow steps.
+          if [ -n "${OPENAI_API_KEY:-}" ]; then
+            echo "::add-mask::$OPENAI_API_KEY"
+            echo "OPENAI_API_KEY=$OPENAI_API_KEY" >> "$GITHUB_ENV"
+
+            mkdir -p "$HOME/.secrets"
+            printf 'OPENAI_API_KEY=%s\n' "$OPENAI_API_KEY" > "$HOME/.secrets/openai.env"
+            chmod 600 "$HOME/.secrets/openai.env"
+            echo "OPENAI_API_KEY detected in runner environment."
+          else
+            echo "OPENAI_API_KEY is missing in runner environment."
+          fi
+
+      - name: Tiered visual grading
+        id: visual-grade
+        uses: classroom-resources/autograding-command-grader@v1
+        env:
+          NODE_PATH: ${{ env.NODE_PATH }}
+        with:
+          test-name: "Visual Match (tiered)"
+          command: "NODE_PATH='${{ env.NODE_PATH }}' node grader/tiered_grade.mjs reference/reference.png index.html 0.90 0.80 0.90 0.15 false"
+          timeout: 10
+          max-score: 1
+
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          VISUAL-GRADE_RESULTS: "${{ steps.visual-grade.outputs.result }}"
+        with:
+          runners: visual-grade
+
+      - name: Prepare debug result images
+        id: prepare-debug-image
+        shell: bash
+        run: |
+          set -euo pipefail
+          has_images=false
+          if [ -f result.png ]; then
+            echo "Found result.png"
+            has_images=true
+          fi
+          if [ -f results/pixel_diff.png ]; then
+            cp results/pixel_diff.png pixel_diff.png
+            echo "Copied results/pixel_diff.png to pixel_diff.png"
+            has_images=true
+          fi
+          if [ "$has_images" = true ]; then
+            echo "has_images=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No debug images found. Skipping debug PR."
+            echo "has_images=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create debug PR for grading artifacts
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: |
+            result.png
+            pixel_diff.png
+          commit-message: "chore(debug): add grading artifacts from autograding run"
+          branch: "autograding/debug-result-${{ github.run_id }}"
+          delete-branch: true
+          title: "Debug artifacts: result.png & pixel_diff.png"
+          body: |
+            This PR was auto-created by the autograding workflow because debug mode is enabled.
+
+            Included artifacts:
+            - result.png (rendered student page)
+            - pixel_diff.png (pixel comparison diff map)
