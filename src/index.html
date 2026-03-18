@@ -6,11 +6,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tony Stark — Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
 
-  <!-- Edit here -->
+  <header class="header container">
+    <div class="header-email">connect@tonystark.com</div>
+    <div class="header-socials">
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero text-center">
+      <div class="container">
+        <div class="avatar-wrapper">
+          <img src="tony_stark.png" alt="Tony Stark" class="avatar-hero">
+          <span class="badge badge-name">Tony Stark 👋</span>
+        </div>
+        <h1 class="hero-title">Turning complex problems<br>into elegant digital<br>solutions.</h1>
+        <button class="btn btn-primary">Download CV &darr;</button>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about bg-muted">
+      <div class="container">
+        <div class="text-center">
+          <span class="badge badge-section mb-6">About Me</span>
+        </div>
+        <div class="grid grid-2 about-grid">
+          <div class="about-image">
+            <img src="tony_stark.png" alt="Tony Stark">
+          </div>
+          <div class="about-text">
+            <p>I'm Tony Stark, a full-stack developer, inventor, and unapologetic tech enthusiast with a passion for building the future one line of code at a time. My work isn't just about writing programs — it's about crafting intelligent, efficient, and innovative solutions that push the boundaries of what's possible in the digital space.</p>
+            <p>Over the years, I've worked on everything from sleek, high-performance websites to complex, AI-powered applications. I believe that technology should be as beautiful as it is functional, so my process blends engineering precision with creative design thinking. Whether I'm designing a scalable back-end architecture, polishing a pixel-perfect front-end, or integrating advanced technologies like AI and IoT, I strive to deliver work that's not just useful, but unforgettable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services text-center">
+      <div class="container">
+        <h2 class="section-heading">I transform ideas into powerful digital<br>products that are fast, beautiful, and<br>built to last.</h2>
+        <span class="badge badge-section mb-6">Services</span>
+        
+        <div class="grid grid-4 text-left">
+          <div class="card service-card">
+            <div class="icon-wrapper">
+              <img src="icons/ui_ux_icon.svg" alt="UI/UX Design">
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Designing intuitive interfaces that keep users engaged.</p>
+          </div>
+          <div class="card service-card">
+            <div class="icon-wrapper">
+              <img src="icons/web_dev_icon.svg" alt="Web Development">
+            </div>
+            <h3>Web Development</h3>
+            <p>Crafting responsive, fast, and secure websites tailored to your needs.</p>
+          </div>
+          <div class="card service-card">
+            <div class="icon-wrapper">
+              <img src="icons/app_dev_icon.svg" alt="App Development">
+            </div>
+            <h3>App Development</h3>
+            <p>Building powerful mobile and web apps from concept to deployment.</p>
+          </div>
+          <div class="card service-card">
+            <div class="icon-wrapper">
+              <img src="icons/ai_icon.svg" alt="Tech Consulting">
+            </div>
+            <h3>Tech Consulting</h3>
+            <p>Helping businesses choose and implement the right technologies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects bg-muted text-center">
+      <div class="container">
+        <span class="badge badge-section mb-6">Projects</span>
+        <div class="grid grid-3 text-left">
+          <div class="card project-card">
+            <img src="sample.png" alt="Project 1" class="project-img">
+            <h3>Project 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio. Repellat amet molestias alias voluptate asperiores?</p>
+          </div>
+          <div class="card project-card">
+            <img src="sample.png" alt="Project 2" class="project-img">
+            <h3>Project 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio. Repellat amet molestias alias voluptate asperiores?</p>
+          </div>
+          <div class="card project-card">
+            <img src="sample.png" alt="Project 3" class="project-img">
+            <h3>Project 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio. Repellat amet molestias alias voluptate asperiores?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact text-center">
+      <div class="container">
+        <span class="badge badge-section mb-6">Contact Me</span>
+        <h2 class="contact-title">Have a project in mind or just<br>want to say hello? Let's connect.</h2>
+        <div class="contact-buttons text-center">
+          <button class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call</button>
+          <button class="btn btn-outline"><i class="fa-regular fa-envelope"></i> Mail</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container text-center">
+      &copy; All rights reserved <span class="footer-highlight">Click To Gain.</span>
+    </div>
+  </footer>
 
 </body>
 
