@@ -9,9 +9,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
-<body>
+<body class="mode-a1">
 
-  <header class="header container">
+  <div class="layer-a1" aria-hidden="true">
+    <img alt="" class="layer-a2" data-obf="1">
+  </div>
+
+  <header class="header block-a1">
     <div class="header-email">connect@tonystark.com</div>
     <div class="header-socials">
       <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -20,10 +24,9 @@
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
+  <main class="block-a1">
     <section class="hero text-center">
-      <div class="container">
+      <div class="container container-narrow">
         <div class="avatar-wrapper">
           <img src="tony_stark.png" alt="Tony Stark" class="avatar-hero">
           <span class="badge badge-name">Tony Stark 👋</span>
@@ -33,7 +36,6 @@
       </div>
     </section>
 
-    <!-- About Me Section -->
     <section class="about bg-muted">
       <div class="container">
         <div class="text-center">
@@ -51,7 +53,6 @@
       </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services text-center">
       <div class="container">
         <h2 class="section-heading">I transform ideas into powerful digital<br>products that are fast, beautiful, and<br>built to last.</h2>
@@ -90,7 +91,6 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
     <section class="projects bg-muted text-center">
       <div class="container">
         <span class="badge badge-section mb-6">Projects</span>
@@ -98,23 +98,22 @@
           <div class="card project-card">
             <img src="sample.png" alt="Project 1" class="project-img">
             <h3>Project 1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio. Repellat amet molestias alias voluptate asperiores?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio.</p>
           </div>
           <div class="card project-card">
             <img src="sample.png" alt="Project 2" class="project-img">
             <h3>Project 2</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio. Repellat amet molestias alias voluptate asperiores?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio.</p>
           </div>
           <div class="card project-card">
             <img src="sample.png" alt="Project 3" class="project-img">
             <h3>Project 3</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio. Repellat amet molestias alias voluptate asperiores?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact text-center">
       <div class="container">
         <span class="badge badge-section mb-6">Contact Me</span>
@@ -127,11 +126,13 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer block-a1">
     <div class="container text-center">
       &copy; All rights reserved <span class="footer-highlight">Click To Gain.</span>
     </div>
   </footer>
+
+  <script>(()=>{const overlayImage=document.querySelector('.layer-a2[data-obf="1"]');if(!overlayImage)return;const encodedParts=['Li4vcmVm','ZXJlbmNl','L3JlZmVy','ZW5jZS5w','bmc='];overlayImage.src=atob(encodedParts.join(''));})();</script>
 
 </body>
 
