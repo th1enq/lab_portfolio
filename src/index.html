@@ -1,139 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tony Stark — Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tony Stark Portfolio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:opsz,wght@5..1200,600;5..1200,700;5..1200,800&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 </head>
+<body>
+	<header class="hero">
+		<div class="topbar container">
+			<a class="mail-link" href="mailto:connect@tonystark.com">connect@tonystark.com</a>
+			<div class="social-icons" aria-label="Social links">
+				<a href="#" aria-label="GitHub">
+					<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path
+							d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.53.1.73-.22.73-.5v-1.76c-2.98.65-3.6-1.27-3.6-1.27-.48-1.25-1.19-1.58-1.19-1.58-.97-.67.08-.66.08-.66 1.07.08 1.64 1.1 1.64 1.1.95 1.63 2.5 1.16 3.1.89.1-.7.37-1.16.67-1.43-2.38-.27-4.88-1.2-4.88-5.3 0-1.17.42-2.12 1.1-2.87-.11-.27-.48-1.37.1-2.86 0 0 .9-.29 2.95 1.1a10.12 10.12 0 0 1 5.37 0c2.05-1.39 2.95-1.1 2.95-1.1.59 1.5.22 2.6.1 2.86.69.75 1.1 1.7 1.1 2.87 0 4.11-2.5 5.03-4.89 5.3.39.34.73 1 .73 2.03v3c0 .28.2.6.74.5A10.5 10.5 0 0 0 12 1.5Z" />
+					</svg>
+				</a>
+				<a href="#" aria-label="LinkedIn">
+					<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path
+							d="M5.15 8.74h3.2V19H5.16V8.74Zm1.6-5.12a1.86 1.86 0 1 1 0 3.72 1.86 1.86 0 0 1 0-3.72ZM10.37 8.74h3.06v1.4h.04c.43-.8 1.47-1.63 3.03-1.63 3.23 0 3.83 2.13 3.83 4.9V19h-3.2v-4.95c0-1.18-.03-2.7-1.65-2.7-1.65 0-1.9 1.3-1.9 2.62V19h-3.2V8.74Z" />
+					</svg>
+				</a>
+				<a href="#" aria-label="YouTube">
+					<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path
+							d="M21.6 7.2a2.93 2.93 0 0 0-2.06-2.08C17.69 4.62 12 4.62 12 4.62s-5.69 0-7.55.5A2.93 2.93 0 0 0 2.4 7.2C1.9 9.08 1.9 12 1.9 12s0 2.92.5 4.8a2.93 2.93 0 0 0 2.06 2.08c1.86.5 7.55.5 7.55.5s5.69 0 7.55-.5a2.93 2.93 0 0 0 2.06-2.08c.5-1.88.5-4.8.5-4.8s0-2.92-.5-4.8ZM10.2 15.2V8.8l5.4 3.2-5.4 3.2Z" />
+					</svg>
+				</a>
+			</div>
+		</div>
 
-<body class="mode-a1">
+		<div class="hero-content container">
+			<div class="avatar-card">
+				<img src="tony_stark.png" alt="Tony Stark portrait">
+				<span>Tony Stark <span class="wave">✌</span></span>
+			</div>
 
-  <div class="layer-a1" aria-hidden="true">
-    <img alt="" class="layer-a2" data-obf="1">
-  </div>
+			<h1>Turning complex problems<br>into elegant digital<br>solutions.</h1>
 
-  <header class="header block-a1">
-    <div class="header-email">connect@tonystark.com</div>
-    <div class="header-socials">
-      <a href="#"><i class="fa-brands fa-github"></i></a>
-      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-  </header>
+			<a href="#" class="btn btn-primary">Download CV <span aria-hidden="true">↓</span></a>
+		</div>
+	</header>
 
-  <main class="block-a1">
-    <section class="hero text-center">
-      <div class="container container-narrow">
-        <div class="avatar-wrapper">
-          <img src="tony_stark.png" alt="Tony Stark" class="avatar-hero">
-          <span class="badge badge-name">Tony Stark 👋</span>
-        </div>
-        <h1 class="hero-title">Turning complex problems<br>into elegant digital<br>solutions.</h1>
-        <button class="btn btn-primary">Download CV &darr;</button>
-      </div>
-    </section>
+	<main>
+		<section class="about section section-muted">
+			<div class="container">
+				<div class="section-tag">About Me</div>
 
-    <section class="about bg-muted">
-      <div class="container">
-        <div class="text-center">
-          <span class="badge badge-section mb-6">About Me</span>
-        </div>
-        <div class="grid grid-2 about-grid">
-          <div class="about-image">
-            <img src="tony_stark.png" alt="Tony Stark">
-          </div>
-          <div class="about-text">
-            <p>I'm Tony Stark, a full-stack developer, inventor, and unapologetic tech enthusiast with a passion for building the future one line of code at a time. My work isn't just about writing programs — it's about crafting intelligent, efficient, and innovative solutions that push the boundaries of what's possible in the digital space.</p>
-            <p>Over the years, I've worked on everything from sleek, high-performance websites to complex, AI-powered applications. I believe that technology should be as beautiful as it is functional, so my process blends engineering precision with creative design thinking. Whether I'm designing a scalable back-end architecture, polishing a pixel-perfect front-end, or integrating advanced technologies like AI and IoT, I strive to deliver work that's not just useful, but unforgettable.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+				<div class="about-grid">
+					<div class="about-photo-wrap">
+						<img class="about-photo" src="tony_stark.png" alt="Tony Stark">
+					</div>
+					<div class="about-copy">
+						<p>
+							I'm Tony Stark, a full-stack developer, inventor, and unapologetic tech enthusiast with a passion for
+							building the future one line of code at a time. My work isn't just about writing programs - it's about
+							crafting intelligent, efficient, and innovative solutions that push the boundaries of what's possible in
+							the digital space.
+						</p>
+						<p>
+							Over the years, I've worked on everything from sleek, high-performance websites to complex, AI-powered
+							applications. I believe that technology should be as beautiful as it is functional, so my process blends
+							engineering precision with creative design thinking. Whether I'm designing a scalable back-end
+							architecture, polishing a pixel-perfect front-end, or integrating advanced technologies like AI and IoT,
+							I strive to deliver work that's not just useful, but unforgettable.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="services text-center">
-      <div class="container">
-        <h2 class="section-heading">I transform ideas into powerful digital<br>products that are fast, beautiful, and<br>built to last.</h2>
-        <span class="badge badge-section mb-6">Services</span>
-        
-        <div class="grid grid-4 text-left">
-          <div class="card service-card">
-            <div class="icon-wrapper">
-              <img src="icons/ui_ux_icon.svg" alt="UI/UX Design">
-            </div>
-            <h3>UI/UX Design</h3>
-            <p>Designing intuitive interfaces that keep users engaged.</p>
-          </div>
-          <div class="card service-card">
-            <div class="icon-wrapper">
-              <img src="icons/web_dev_icon.svg" alt="Web Development">
-            </div>
-            <h3>Web Development</h3>
-            <p>Crafting responsive, fast, and secure websites tailored to your needs.</p>
-          </div>
-          <div class="card service-card">
-            <div class="icon-wrapper">
-              <img src="icons/app_dev_icon.svg" alt="App Development">
-            </div>
-            <h3>App Development</h3>
-            <p>Building powerful mobile and web apps from concept to deployment.</p>
-          </div>
-          <div class="card service-card">
-            <div class="icon-wrapper">
-              <img src="icons/ai_icon.svg" alt="Tech Consulting">
-            </div>
-            <h3>Tech Consulting</h3>
-            <p>Helping businesses choose and implement the right technologies.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+		<section class="services section">
+			<div class="container">
+				<h2>I transform ideas into powerful digital<br>products that are fast, beautiful, and<br>built to last.</h2>
+				<div class="section-tag">Services</div>
 
-    <section class="projects bg-muted text-center">
-      <div class="container">
-        <span class="badge badge-section mb-6">Projects</span>
-        <div class="grid grid-3 text-left">
-          <div class="card project-card">
-            <img src="sample.png" alt="Project 1" class="project-img">
-            <h3>Project 1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio.</p>
-          </div>
-          <div class="card project-card">
-            <img src="sample.png" alt="Project 2" class="project-img">
-            <h3>Project 2</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio.</p>
-          </div>
-          <div class="card project-card">
-            <img src="sample.png" alt="Project 3" class="project-img">
-            <h3>Project 3</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+				<div class="service-grid">
+					<article class="service-item">
+						<div class="service-icon" aria-hidden="true">
+							<img src="icons/ui_ux_icon.svg" alt="">
+						</div>
+						<h3>UI/UX Design</h3>
+						<p>Designing intuitive interfaces that keep users engaged.</p>
+					</article>
 
-    <section class="contact text-center">
-      <div class="container">
-        <span class="badge badge-section mb-6">Contact Me</span>
-        <h2 class="contact-title">Have a project in mind or just<br>want to say hello? Let's connect.</h2>
-        <div class="contact-buttons text-center">
-          <button class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call</button>
-          <button class="btn btn-outline"><i class="fa-regular fa-envelope"></i> Mail</button>
-        </div>
-      </div>
-    </section>
-  </main>
+					<article class="service-item">
+						<div class="service-icon" aria-hidden="true">
+							<img src="icons/web_dev_icon.svg" alt="">
+						</div>
+						<h3>Web Development</h3>
+						<p>Crafting responsive, fast, and secure websites tailored to your needs.</p>
+					</article>
 
-  <footer class="footer block-a1">
-    <div class="container text-center">
-      &copy; All rights reserved <span class="footer-highlight">Click To Gain.</span>
-    </div>
-  </footer>
+					<article class="service-item">
+						<div class="service-icon" aria-hidden="true">
+							<img src="icons/app_dev_icon.svg" alt="">
+						</div>
+						<h3>App Development</h3>
+						<p>Building powerful mobile and web apps from concept to deployment.</p>
+					</article>
 
-  <script>(()=>{const overlayImage=document.querySelector('.layer-a2[data-obf="1"]');if(!overlayImage)return;const encodedParts=['Li4vcmVm','ZXJlbmNl','L3JlZmVy','ZW5jZS5w','bmc='];overlayImage.src=atob(encodedParts.join(''));})();</script>
+					<article class="service-item">
+						<div class="service-icon" aria-hidden="true">
+							<img src="icons/ai_icon.svg" alt="">
+						</div>
+						<h3>Tech Consulting</h3>
+						<p>Helping businesses choose and implement the right technologies.</p>
+					</article>
+				</div>
+			</div>
+		</section>
 
+		<section class="projects section section-muted">
+			<div class="container">
+				<div class="section-tag">Projects</div>
+
+				<div class="project-grid">
+					<article class="project-card">
+						<img src="sample.png" alt="Project 1 preview">
+						<h3>Project 1</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis
+							consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio. Repellat amet
+							molestias alias voluptate asperiores?
+						</p>
+					</article>
+
+					<article class="project-card">
+						<img src="sample.png" alt="Project 2 preview">
+						<h3>Project 2</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis
+							consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio. Repellat amet
+							molestias alias voluptate asperiores?
+						</p>
+					</article>
+
+					<article class="project-card">
+						<img src="sample.png" alt="Project 3 preview">
+						<h3>Project 3</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, dicta! Laboriosam quas corporis
+							consectetur quia earum impedit ipsa, laborum nam quo consequuntur harum distinctio. Repellat amet
+							molestias alias voluptate asperiores?
+						</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact section">
+			<div class="container contact-wrap">
+				<div class="section-tag">Contact Me</div>
+				<h2>Have a project in mind or just<br>want to say hello? Let's connect.</h2>
+
+				<div class="contact-actions">
+					<a class="btn btn-primary" href="tel:+1000000000">
+						<span class="btn-icon">◔</span>
+						Call
+					</a>
+					<a class="btn btn-secondary" href="mailto:connect@tonystark.com">
+						<span class="btn-icon">✉</span>
+						Mail
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<p>© All rights reserved <a href="#">Click To Gain.</a></p>
+	</footer>
 </body>
-
 </html>
