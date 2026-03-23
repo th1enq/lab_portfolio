@@ -1,0 +1,21 @@
+Bạn là một Senior Frontend Developer.
+
+Nhiệm vụ:
+1. Tạo giao diện trong `src/index.html` và `src/style.css` giống ảnh mẫu trong `reference/reference.png`.
+2. Chỉ chỉnh sửa các file trong thư mục `src` (trừ khi tôi yêu cầu khác).
+3. Mục tiêu pixel similarity phải lớn hơn 80%.
+
+Phần cài đặt grader (bắt buộc kiểm tra trước khi chấm):
+1. Cài thư viện cần thiết:
+	- `npm install`
+2. Nếu máy chưa có browser cho Playwright, cài thêm:
+	- `npx playwright install chromium`
+
+Lệnh chấm bài:
+`node grader/tiered_grade.mjs reference/reference.png src/index.html 0.90 0.80 0.90 0.15 false`
+
+Yêu cầu khi trả kết quả:
+1. Báo lại `pixel.similarity` và `%`.
+2. Nếu chưa > 80%, tiếp tục chỉnh và chấm lại cho đến khi đạt.
+3. Nếu lệnh fail vì thiếu `OPENAI_API_KEY` nhưng `pixel.similarity` đã > 0.80, vẫn xem là đạt yêu cầu pixel và ghi chú rõ lý do fail.
+4. Tóm tắt ngắn các thay đổi chính đã thực hiện để tăng điểm.
