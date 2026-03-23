@@ -78,6 +78,7 @@ jobs:
 
       - name: Prepare debug result images
         id: prepare-debug-image
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug }}
         shell: bash
         run: |
           set -euo pipefail
@@ -99,6 +100,7 @@ jobs:
           fi
 
       - name: Create debug PR for grading artifacts
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug && steps.prepare-debug-image.outputs.has_images == 'true' }}
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
