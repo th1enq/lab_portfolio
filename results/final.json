@@ -1,17 +1,17 @@
 {
-  "final_pass": false,
-  "final_similarity": 0.8066640427804592,
-  "used": "openai",
+  "final_pass": true,
+  "final_similarity": 0.9118094444093152,
+  "used": "pixel",
   "pixel": {
-    "similarity": 0.8066640427804592,
-    "percent": 80.66640427804592,
-    "diffPixels": 800198,
+    "similarity": 0.9118094444093152,
+    "percent": 91.18094444093153,
+    "diffPixels": 800557,
     "totalPixels": 9112320,
-    "contentPixels": 4138899,
-    "scoringPixels": 4138899,
-    "diffRatio": 0.19333595721954075,
-    "canvasSimilarity": 0.9121850417895772,
-    "canvasDiffRatio": 0.08781495821042282,
+    "contentPixels": 9077582,
+    "scoringPixels": 9077582,
+    "diffRatio": 0.08819055559068484,
+    "canvasSimilarity": 0.9121456445778902,
+    "canvasDiffRatio": 0.08785435542210984,
     "comparedWidth": 1920,
     "comparedHeight": 4746,
     "pmThreshold": 0.15,
@@ -19,6 +19,5 @@
     "ref": "reference/reference.png",
     "stu": "results/student.png",
     "diff": "results/pixel_diff.png"
-  },
-  "openai": null
+  }
 }
